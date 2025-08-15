@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Магазин смартфонов SmartZone. Покупайте современные смартфоны онлайн!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="SmartZone – Магазин смартфонов" />
+  <meta property="og:description" content="Широкий выбор смартфонов от ведущих брендов по выгодным ценам" />
+  <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/597/597177.png" />
+  <meta property="og:type" content="website" />
+
+  <title>SmartZone – Магазин смартфонов</title>
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/597/597177.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <div class="header-wrapper">
+        <div class="logo">
+          <a href="#"><img src="iphone.png" alt="Логотип SmartZone"></a>
+        </div>
+        <h1>SmartZone</h1>
+        <nav aria-label="Основная навигация">
+          <ul class="main-nav">
+            <li><a href="#catalog">Каталог</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+            <li><a href="#partners">Партнёры</a></li>
+            <li><a href="registration.html" target="_blank">Регистрация</a></li>
+          </ul>
+        </nav>
+        <!-- Блок корзины в шапке -->
+        <div class="cart-icon" id="cartIcon" aria-label="Корзина">
+          <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Корзина" width="32" height="32">
+          <span class="cart-count" id="cartCount">0</span>
+        </div>
+      </div>
+    </div>
+        <div class="products" id="productList">
+      <!-- Товары добавляются динамически -->
+    </div>
+  </div>
+  </header>
+
+  <main class="container">
+    <div id="cookieConsent" style="display: none; position: fixed; bottom: 0; background: #eee; width: 100%; padding: 10px; text-align: center;">
+      Мы используем cookies для улучшения работы сайта. <button id="acceptCookies">Принять</button>
+    </div>
+
+    <!-- Раздел каталога -->
+    <section id="catalog">
+      <div class="catalog-controls" style="margin-bottom:1em; display:flex; gap:1em; align-items:center;">
+        <label for="brandFilter">Бренд:</label>
+        <select id="brandFilter">
+          <option value="all">Все</option>
+          <option value="Apple">Apple</option>
+          <option value="Samsung">Samsung</option>
+          <option value="Xiaomi">Xiaomi</option>
+          <option value="OnePlus">OnePlus</option>
+        </select>
+
+        <label for="sortOrder">Сортировать по цене:</label>
+        <select id="sortOrder">
+          <option value="asc">По возрастанию</option>
+          <option value="desc">По убыванию</option>
+        </select>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+        <!-- Карточка товара: обратите внимание на data-атрибуты brand и price -->
+        <article class="card" data-brand="Apple" data-price="139990">
+          <img src="https://shop.mts.by/upload/resize_cache/iblock/b6b/6zegqdng2sfy2z9a7yqn7841k7aadve7/500_926_1/1.jpg" alt="iPhone 15 Pro Max" loading="lazy">
+          <div class="card-content">
+            <h3 class="card-title">iPhone 15 Pro Max</h3>
+            <p class="card-price">Цена: от <span class="price-value">139 990</span> ₽</p>
+            <button class="buy-btn" aria-label="Купить iPhone 15 Pro Max">Добавить в корзину</button>
+          </div>
+        </article>
+
+        <article class="card" data-brand="Samsung" data-price="119990">
+          <img src="https://shop.mts.by/upload/resize_cache/webp/iblock/b47/2tpvbown0um12293q4fiwd02mgaf7jxy/500_926_1/Galaxy_S23_Ultra_Black_1.webp" alt="Samsung Galaxy S23 Ultra" loading="lazy">
+          <div class="card-content">
+            <h3 class="card-title">Samsung Galaxy S23 Ultra</h3>
+            <p class="card-price">Цена: от <span class="price-value">119 990</span> ₽</p>
+            <button class="buy-btn" aria-label="Купить Samsung Galaxy S23 Ultra">Добавить в корзину</button>
+          </div>
+        </article>
+
+        <article class="card" data-brand="Xiaomi" data-price="69990">
+          <img src="https://shop.mts.by/upload/resize_cache/webp/iblock/aa2/qfdtrzbd6ugklyy4pbq8pxxq7oo8bcr8/500_926_1/Green1.webp" alt="Xiaomi 13 Pro" loading="lazy">
+          <div class="card-content">
+            <h3 class="card-title">Xiaomi 13 Pro</h3>
+            <p class="card-price">Цена: от <span class="price-value">69 990</span> ₽</p>
+            <button class="buy-btn" aria-label="Купить Xiaomi 13 Pro">Добавить в корзину</button>
+          </div>
+        </article>
+
+        <article class="card" data-brand="OnePlus" data-price="59990">
+          <img src="https://imgproxy.onliner.by/b2QQccOeQICBVD1wl6MkGxQmhBME07V3-yxxL2rS4vI/w:700/h:550/f:jpg/aHR0cHM6Ly9jb250/ZW50Lm9ubGluZXIu/YnkvY2F0YWxvZy9k/ZXZpY2UvbGFyZ2Uv/Y2FiODgzZWFkYTI4/NTMyYzhiOWFlYTFj/ZmZiMzQ5NmIuanBl/Zw" alt="OnePlus 11" loading="lazy">
+          <div class="card-content">
+            <h3 class="card-title">OnePlus 11</h3>
+            <p class="card-price">Цена: от <span class="price-value">59 990</span> ₽</p>
+            <button class="buy-btn" aria-label="Купить OnePlus 11">Добавить в корзину</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Другие разделы без изменений -->
+    <section id="about">
+      <h2>О нас</h2>
+      <p>SmartZone — надёжный интернет-магазин смартфонов. Мы предлагаем новинки и проверенные модели от ведущих брендов по доступным ценам, с быстрой доставкой и официальной гарантией.</p>
+    </section>
+
+<nav class="menu">
+  <ul>
+    <li class="dropdown">
+      <a href="#"><span class="contact-icon">📩</span> Свяжитесь с нами</a>
+      <ul class="dropdown-content">
+        <li>📞 +75 (29) 123-45-67</li>
+        <li>📧 info@shop.ru</li>
+        <li>📍 Москва, улица Технологическая</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+</nav>
+
+
+    <section id="partners">
+      <h2>Наши партнёры</h2>
+      <div class="partners-banner">
+        <a href="https://www.apple.com/ru/" target="_blank" aria-label="Apple">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" width="120" height="150" loading="lazy">
+        </a>
+        <a href="https://www.samsung.com/ru/" target="_blank" aria-label="Samsung">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung" width="120" height="70" loading="lazy">
+        </a>
+        <a href="https://www.mi.com/ru/" target="_blank" aria-label="Xiaomi">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Xiaomi_logo.svg" alt="Xiaomi" width="120" height="70" loading="lazy">
+        </a>
+      </div>
+    </section>
+
+    <!-- Модальное окно корзины -->
+   <div id="cartModal" class="cart-modal">
+  <div class="cart-content">
+    <span class="close-btn" id="closeCart">&times;</span>
+    <h2>Ваша корзина</h2>
+    <div id="cartItemsContainer">
+    </div>
+    <div class="cart-total">
+      <strong>Итого:</strong> <span id="cartTotalValue">0</span> ₽
+    </div>
+    <button id="checkoutBtn">Оформить заказ</button>
+    <button id="clearCartBtn">Очистить корзину</button> 
+  </div>
+</div>
+
+
+    <div id="map" style="width: 100%; height: 400px"></div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d82c1e81-c9cc-4458-9a9d-43fecd890afa&lang=ru_RU"></script>
+    <script>
+      ymaps.ready(init);
+      function init() {
+        var map = new ymaps.Map('map', {
+          center: [55.755814, 37.617635],
+          zoom: 17
+        });
+        var placemark = new ymaps.Placemark([55.755814, 37.617635], {
+          hintContent: 'SmartZone',
+          balloonContent: 'Москва, ул. Технологическая, 42'
+        });
+        map.geoObjects.add(placemark);
+      }
+    </script>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Магазин смартфонов SmartZone. Все права защищены.</p>
+    </div>
+  </footer>
+</body>
+</html>

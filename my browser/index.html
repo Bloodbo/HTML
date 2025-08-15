@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Браузер</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="nav-bar">
+    <!-- Поле ввода для URL-адреса -->
+    <input type="text" id="url-bar" placeholder="Введите URL" />
+    <!-- Кнопка для перехода по введённому URL -->
+    <button id="go-button">Перейти</button>
+  </div>
+  <!-- Контейнер для отображения содержимого страницы -->
+  <div id="browser-content">
+    <!-- Содержимое будет подгружаться сюда -->
+  </div>
+    <!-- Скрипт для обработки нажатия кнопки и перехода по указанному URL -->
+  <script>
+    document.getElementById('go-button').addEventListener('click', () => {
+      // Получаем значение, введённое в поле URL
+      const url = document.getElementById('url-bar').value;
+      // Перенаправляем текущий документ на введённый URL
+      window.location.href = url;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Explore the world of cars. Learn about the legendary Ford Mustang, BMW M3, and more!">
+    <head>
+        <link rel="shortcut icon" href="https://cdn-icons-png.freepik.com/512/75/75628.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    
+    <title>Всё об авто</title>
+    <style>
+        body {
+    background: linear-gradient(to right, #aaaaaa, #838383); /* Плавный переход цветов */
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+}
+
+        html {
+    scroll-behavior: smooth;
+        }
+
+    a {
+    text-decoration: none; /* Убираем подчёркивание */
+   }
+   @media (max-width: 768px) {
+    nav a {
+        font-size: 18px;  /* Уменьшаем размер текста для мобильных устройств */
+        padding: 10px;  /* Меньше отступов */
+        width: 100%;  /* Кнопки будут на всю ширину экрана */
+        display: block;  /* Меню становится вертикальным */
+    }
+    nav a.active {
+    background-color: #888; /* Выделяем активную ссылку */
+    color: #fff;
+     }
+     section {
+    background: linear-gradient(135deg, #444, #666);
+    padding: 40px;
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+    .car-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .car img {
+        opacity: 0;
+        transition: opacity 1s ease;
+        width: 100%; /* Изображения занимают всю ширину на мобильных устройствах */
+    }
+} 
+
+    .car-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .car img {
+        width: 100%;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .car img:hover {
+    transform: scale(1.05); /* Увеличиваем изображение */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Добавляем тень */
+     }
+        .details-btn {
+    padding: 10px 20px;
+    background-color: #3a3838;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+     }
+
+      .details-btn:hover {
+    background-color: #777;
+       }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5
+            padding 20px;
+        }
+        h1 {
+    font-size: calc(1.5rem + 1vw);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: inline-block;
+    color: #afafaf;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out; 
+        }
+        @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+        h1::before {
+       content: '🛣️';  
+       margin-right: 10px;
+     }
+     .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #444;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 24px;
+    text-decoration: none;
+    opacity: 1; /* Постоянно видна */
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #666;
+}
+
+.details-btn {
+    background: linear-gradient(90deg, #444, #666);
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.details-btn:hover {
+    background: linear-gradient(90deg, #666, #888);
+}
+
+a.cta {
+    font-size: 24px;
+    padding: 15px 30px;
+    background-color: #ff9800;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+a.cta:hover {
+    background-color: #e68900;
+}
+
+
+       p {
+    font-size: calc(1rem + 0.5vw);
+         }
+         p::before{
+            content:'🚘' ;
+            margin-right: 10px;
+         }
+         b{
+            animation: fadeIn 1s ease-in-out; 
+         }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    background-color: #666;
+    padding: 10px;
+    }
+
+      nav a {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Тень для кнопок */
+    font-size: 20px;
+    background: linear-gradient(45deg, #444, #888); /* Градиент от темного к светлому */
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.4s ease;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    }
+
+       nav a:hover {
+    background-color: #888;
+    color: yellow;  
+    transform: scale(1.1);
+       }
+
+
+        .car img {
+              transition: transform 0.3s ease;
+              border: 5px solid #888;
+              border-radius: 10px;
+          }
+
+          .car img:hover {
+            filter: brightness(70%);  /* Затемняем изображение при наведении */
+            transform: scale(1.1);
+              }
+
+        .car h2 {
+            color: #ffffff;
+        }
+        .car-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 20px;
+          padding: 20px;
+         }
+
+
+         .car {
+            
+            border-radius: 10px;
+           padding: 90px;
+           box-shadow: 0 4px 8px rgb(0, 0, 0);
+             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        footer a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+     }
+
+    footer a:hover {
+    color: white;
+    }
+    </style>
+</head>
+<body>
+    
+    <!-- Шапка сайта -->
+    <header>
+        <h1>Мир автомобилей</h1>
+    </header>
+    <!-- Навигация -->
+    <nav>
+        <a href="file:///D:/index.html"><i class="fas fa-home"></i> Домашняя</a>
+        <a href="https://t.me/auto_mech0"><i class="fas fa-info-circle"></i> О нас</a>
+        <a href="https://t.me/Bloodbo0"><i class="fas fa-phone"></i> Контакты</a>
+    </nav>
+    
+    <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="message">Сообщение:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+        <input type="submit" value="Отправить">
+    </form>
+    
+    
+
+    <div class="car">
+        <h2>Ford Mustang</h2>
+        <img src="https://i.ytimg.com/vi/F9hnXK8Ejck/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCkCiT7T4vYtKZ0LlPHdwStrvO1Jw" alt="Ford Mustang" loading="lazy">
+        <p><b>Ford Mustang</b> — это легендарный американский спортивный автомобиль, выпускаемый с 1964 года. Он стал символом мощи и стиля на дороге.<a href="https://www.drom.ru/catalog/ford/mustang/g_1964_10958/"> Узнать подробнее</a> </p>
+        
+    </div>
+
+    <div class="car">
+        <h2>BMW M3</h2>
+        <img src="https://a.d-cd.net/zOtiSBYBPJoSyH-5P-USTDRGdwo-960.jpg" alt="BMW M3" loading="lazy">
+        <p><b>BMW M3</b> — высокопроизводительный спортивный автомобиль от немецкого производителя BMW, который отличается мощностью и динамикой в управлении.<a href="https://www.drom.ru/catalog/bmw/m3/g_2020_12166/"> Узнать подробнее</a></p>
+    </div>
+
+    <div class = "car">
+        <h2>MERCEDES-BENZ S CLASS W220</h2>
+        <img src="https://mers.lv/_nw/0/89753291.jpg" alt = "ЭТО 220" loading="lazy">
+        <p><b>Mercedes-Benz S class W220</b> -  четвёртое поколение флагманского семейства представительских автомобилей
+             S-класса немецкой марки Mercedes-Benz, выпускавшихся с 1998 по 2005 год.<a href="https://auto.ru/catalog/cars/mercedes/s_klasse/4995296/4995298/specifications/4995298__4995301/"> Узнать Подробнее</a> </p>
+
+    </div>
+    <div class="car">
+        <h2>MINI R50(2000-2008)</h2>
+        <img src="https://otoba.ru/dvigatel/mini/img/w10b16a/mini-cooper-2004.jpg" alt = "Mini Cooper R50" loading="lazy">
+        <P><B>Mini Cooper R50</B> - Хэтчбек 3 дв.
+             B-класса, передний привод. Механика и вариатор. Дизельные и бензиновые двигатели мощностью от 75 до 116 лошадиных сил.<a href="https://auto.ru/catalog/cars/mini/hatch/6285460/4601950/specifications/4601950__4601958/"> Узнать Подробнее</a></P>
+    
+    </div>
+    <div class="car">
+        <h2>CITROEN C5</h2>
+        <img src="https://s.auto.drom.ru/i24199/c/photos/fullsize/citroen/c5/citroen_c5_582862.jpg" alt="С5 ТРТРТРТРТ ВРУУУУУУУМ" loading="lazy">
+        <p><b>Citroën C5</b> — среднеразмерный автомобиль французской компании Citroën, входящей в концерн PSA Peugeot Citroën. Выпускался с 2001 года под внутризаводским обозначением «Х4», 
+            в августе 2004 испытал рестайлинг, получив обозначение «Х41». 
+            В 2008 появилось второе поколение — третья серия под заводским обозначением «Х7».<a href="https://www.drom.ru/catalog/citroen/c5/"> Узнать Подробнее</a> </p>
+    </div>
+    <div class="car">
+        <h2>RENAULT DUSTER</h2>
+        <img src="https://i.pinimg.com/736x/b6/51/22/b65122572a54053407d30e2d0bd09ec4.jpg" alt="дустер в соло" loading="lazy">
+        <p><b>Renault Duster</b>
+           (dust — «пыль») — компактный кроссовер, разработанный в техноцентре Renault в Гвианкуре. Впервые представлен 8 декабря 2009 года под дочерней маркой Dacia для рынков Европы (хотя автомобили под маркой Dacia Duster выпускались и ранее). 
+            Позднее были представлены версии под брендом Renault, производившиеся в России, Бразилии, Индии и Румынии.
+            Renault Duster — кроссовер B-класса, для которого бездорожье не проблема.
+            Модель Duster появилась на европейском рынке в 2010 году под брендом Dacia. 
+            Два года спустя этот же внедорожник, получив логотип «Рено» и целый ряд изменений в дизайне и конструкции, вышел на российский рынок, вызвав нешуточный ажиотаж. <a href="https://www.drom.ru/catalog/renault/duster/"> Узнать Подробнее</a></p>
+    </div>
+    <div class="car">
+        <h2>Citroen DS 19</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA_MvxRovzBX7O4sr7uiIxOda2_bsHOa71i-4dEWUVqQt73f3SXQCCJrksLGbwXUJsSZA&usqp=CAU" >
+        <p><b>Citroen DS 19</b> - автомобиль бизнес-класса, выпускавшийся французской фирмой Citroën в 1955—1975 годах. <a href="https://topruscar.ru/artefact/technical-characteristics-citroen/citroen-ds-19"> Узнать подробнее</a></p>
+    </div>
+    <a href="#" class="back-to-top">⬆</a> <!-- Символ стрелки вверх -->
+</body>
+</html>

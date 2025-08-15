@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Explore the fascinating world of aviation. Learn about legendary aircraft like the Boeing 747, Airbus A380, and more!">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3557/3557921.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Авиация</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #cce7ff, #b0d8f2);
+            font-family: 'Roboto', sans-serif;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(to right, #0073e6, #cce7ff);
+            color: #004080;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: calc(2rem + 1vw);
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+            color: #002060;
+            animation: glow 2s infinite alternate;
+        }
+
+        header .icon {
+            font-size: 50px;
+            color: #004080;
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+        }
+
+        header .icon-right {
+            right: 10px;
+            left: auto;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 8px #004080, 0 0 20px #0056b3;
+            }
+            to {
+                text-shadow: 0 0 16px #0073e6, 0 0 30px #004080;
+            }
+        }
+        nav a {
+        font-size: 18px;
+        background: linear-gradient(135deg, #0056b3, #0073e6);
+        border: none;
+        border-radius: 30px; 
+        text-decoration: none;
+        color: white;
+        padding: 12px 20px;
+        transition: all 0.3s ease;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        gap: 8px; 
+    }
+
+    nav a:hover {
+        background: linear-gradient(135deg, #0073e6, #0056b3);
+        color: #e6f2ff;
+        border-color: #e6f2ff;
+        transform: translateY(-2px);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    nav i {
+        font-size: 30px; 
+    }
+
+        .aircraft-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .aircraft {
+            background: linear-gradient(135deg, #e6f2ff, #cce7ff);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .aircraft:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .aircraft img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <i class="fas fa-plane icon"></i>
+        <h1>Авиация</h1>
+        <i class="fas fa-plane icon icon-right"></i>
+    </header>
+
+    <nav>
+        <a href="#"><i class="fas fa-home"></i> Главная</a>
+        <a href="#"><i class="fas fa-users"></i> О нас</a>
+        <a href="#"><i class="fas fa-envelope"></i> Контакты</a>
+    </nav>
+
+    <div class="aircraft-container">
+        <div class="aircraft">
+            <h2>Boeing 747</h2>
+            <img src="https://i.insider.com/65148e2d1c099d0019ad4c68?width=800&format=jpeg&auto=webp" alt="Boeing 747">
+            <p><b>Boeing 747</b> — известный как "Королева Небес", это первый в мире широкофюзеляжный самолет, который был произведен в 1969 году. <a href="https://ru.wikipedia.org/wiki/Boeing_747">Узнать подробнее</a></p>
+        </div>
+
+        <div class="aircraft">
+            <h2>Airbus A380</h2>
+            <img src="https://gotravelyourway.com/wp-content/uploads/2023/10/emirates-a380-aircraft-e1714668544286.webp" alt="Airbus A380">
+            <p><b>Airbus A380</b> — крупнейший пассажирский самолет в мире, созданный компанией Airbus. Его первый полет состоялся в 2005 году. <a href="https://ru.wikipedia.org/wiki/Airbus_A380">Узнать подробнее</a></p>
+        </div>
+
+        <div class="aircraft">
+            <h2>Concorde</h2>
+            <img src="https://miro.medium.com/v2/resize:fit:1400/0*IeYypBfuB7qgbq6m.jpg" alt="Concorde">
+            <p><b>Concorde</b> — сверхзвуковой пассажирский самолет, разработанный в 1960-х годах совместно Великобританией и Францией. <a href="https://ru.wikipedia.org/wiki/Concorde">Узнать подробнее</a></p>
+        </div>
+
+        <div class="aircraft">
+            <h2>Ту-160</h2>
+            <img src="https://military-informant.com/wp-content/uploads/2010/05/tu160.jpg" alt="Ту-160">
+            <p><b>Ту-160</b> — стратегический сверхзвуковой бомбардировщик, созданный в СССР. Это один из крупнейших и мощнейших военных самолетов. <a href="https://ru.wikipedia.org/wiki/Ту-160">Узнать подробнее</a></p>
+        </div>
+
+        <div class="aircraft">
+            <h2>Ил-2</h2>
+            <img src="https://rg.ru/uploads/images/168/75/77/34p_new_1000.jpg" alt="Ил-2">
+            <p><b>Ил-2</b> — штурмовик времен Второй мировой войны, прозванный "летающим танком". <a href="https://ru.wikipedia.org/wiki/Ил-2">Узнать подробнее</a></p>
+        </div>
+
+        <div class="aircraft">
+            <h2>Су-57</h2>
+            <img src="https://naked-science.ru/wp-content/uploads/2019/12/k5i3qZvnRFQ.jpg" alt="Су-57">
+            <p><b>Су-57</b> — современный российский истребитель пятого поколения, созданный для выполнения сложных боевых задач. <a href="https://ru.wikipedia.org/wiki/Су-57">Узнать подробнее</a></p>
+        </div>
+
+        <div class="aircraft">
+            <h2>Ан-225 «Мрия»</h2>
+            <img src="https://jetvip.ru/media/plane/69862/image_Qv3MFU7.jpg" alt="Ан-225">
+            <p><b>Ан-225</b> — самый большой транспортный самолет в мире, разработанный ОКБ Антонова. Построен для перевозки крупногабаритных грузов. <a href="https://ru.wikipedia.org/wiki/Ан-225">Узнать подробнее</a></p>
+        </div>
+    
+        <div class="aircraft">
+            <h2>F-22 Raptor</h2>
+            <img src="https://media.defense.gov/2021/Sep/17/2002856354/1200/1200/0/210911-Z-DY403-9158.JPG" alt="F-22 Raptor">
+            <p><b>F-22 Raptor</b> — американский истребитель пятого поколения, обладающий высокой маневренностью и малозаметностью. <a href="https://ru.wikipedia.org/wiki/F-22_Raptor">Узнать подробнее</a></p>
+        </div>
+    
+        <div class="aircraft">
+            <h2>Bombardier Global 7500</h2>
+            <img src="https://cdn-fpmhi.nitrocdn.com/ZnEpCgexWtstPtkiGVnmuujwIHzUPtkg/assets/images/optimized/rev-7eb3dda/www.jetfinder.com/wp-content/uploads/2023/03/global_7500_outside_view-scaled.jpg" alt="Bombardier Global 7500">
+            <p><b>Bombardier Global 7500</b> — канадский бизнес-джет с рекордной дальностью полета и роскошным интерьером. <a href="https://ru.wikipedia.org/wiki/Bombardier_Global_7500">Узнать подробнее</a></p>
+        </div>
+    
+        <div class="aircraft">
+            <h2>МиГ-29</h2>
+            <img src="https://aviarf.ru/wp-content/uploads/2016/02/mig-29-1600.jpg" alt="МиГ-29">
+            <p><b>МиГ-29</b> — многоцелевой истребитель четвёртого поколения, созданный в СССР для завоевания превосходства в воздухе. <a href="https://ru.wikipedia.org/wiki/МиГ-29">Узнать подробнее</a></p>
+        </div>
+    </div>
+    
+
+    <footer>
+        <p>&copy; 2024 Мир Авиации. Все права защищены.</p>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    </footer>
+</body>
+</html>

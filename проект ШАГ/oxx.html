@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="OxxyStore — Официальный магазин мерча Оксимирона. Купите худи, футболки, кепки!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="OxxyStore – Магазин мерча Оксимирона" />
+  <meta property="og:description" content="Купите официальный мерч Оксимирона: худи, футболки, аксессуары" />
+  <meta property="og:image" content="https://example.com/oxxystore-banner.png" />
+  <meta property="og:type" content="website" />
+
+  <title>OxxyStore – Мерч Оксимирона</title>
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/12908/12908674.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <div class="header-wrapper">
+        <div class="logo">
+          <a href="#"><img src="rapper.png" alt="OxxyStore logo"></a>
+        </div>
+        <h1>OxxyStore</h1>
+        <nav aria-label="Основная навигация">
+          <ul class="main-nav">
+            <li><a href="#catalog">Каталог</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+            <li><a href="#partners">Партнёры</a></li>
+            <li><a href="registration.html" target="_blank">Регистрация</a></li>
+          </ul>
+        </nav>
+        <div class="cart-icon" id="cartIcon" aria-label="Корзина">
+          <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Корзина" width="32" height="32">
+          <span class="cart-count" id="cartCount">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="cookieConsent" style="display: none; position: fixed; bottom: 0; background: #eee; width: 100%; padding: 10px; text-align: center;">
+      Мы используем cookies для улучшения работы сайта. <button id="acceptCookies">Принять</button>
+    </div>
+
+    <section id="catalog">
+      <div class="catalog-controls" style="margin-bottom:1em; display:flex; gap:1em; align-items:center;">
+        <label for="brandFilter">Категория:</label>
+        <select id="brandFilter">
+          <option value="all">Все</option>
+          <option value="hoodie">Худи</option>
+          <option value="tee">Футболки</option>
+          <option value="cap">Кепки</option>
+          <option value="accessory">Аксессуары</option>
+        </select>
+
+        <label for="sortOrder">Сортировать по цене:</label>
+        <select id="sortOrder">
+          <option value="asc">По возрастанию</option>
+          <option value="desc">По убыванию</option>
+        </select>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+        <article class="card" data-category="hoodie" data-price="5999">
+          <img src="https://www.printsalon.ua/images/products/view/oxxxymiron-dolgiy-put-domoy_11.jpg" alt="Худи Оксимирон чёрное" loading="lazy">
+          <div class="card-content">
+            <h3 class="card-title">Худи OxxyStore — Чёрное</h3>
+            <p class="card-price">Цена: <span class="price-value">5 999</span> ₽</p>
+            <button class="buy-btn" aria-label="Купить чёрное худи">Добавить в корзину</button>
+          </div>
+        </article>
+
+        <article class="card" data-category="tee" data-price="2999">
+          <img src="https://foxstyle.by/upload/iblock/152/152dc54d585cbac2bff866c9ee0155a0.png" alt="Футболка Оксимирон белая" loading="lazy">
+          <div class="card-content">
+            <h3 class="card-title">Футболка OxxyStore — Белая</h3>
+            <p class="card-price">Цена: <span class="price-value">2 999</span> ₽</p>
+            <button class="buy-btn" aria-label="Купить белую футболку">Добавить в корзину</button>
+          </div>
+        </article>
+
+        <article class="card" data-category="cap" data-price="1299">
+          <img src="https://ae04.alicdn.com/kf/H46224dc2cbc0494588f653f1025158a7D.jpg_640x640.jpg" alt="Кепка Оксимирон" loading="lazy">
+          <div class="card-content">
+            <h3 class="card-title">Кепка OxxyStore</h3>
+            <p class="card-price">Цена: <span class="price-value">1 299</span> ₽</p>
+            <button class="buy-btn" aria-label="Купить кепку">Добавить в корзину</button>
+          </div>
+        </article>
+
+        <article class="card" data-category="accessory" data-price="1099">
+          <img src="https://basket-21.wbbasket.ru/vol3494/part349437/349437175/images/c516x688/1.webp" alt="фигурка Оксимирона" loading="lazy">
+          <div class="card-content">
+            <h3 class="card-title">фигурка Оксимирона</h3>
+            <p class="card-price">Цена: <span class="price-value">1099</span> ₽</p>
+            <button class="buy-btn" aria-label="Купить набор стикеров">Добавить в корзину</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>Про нас</h2>
+      <p>OxxyStore — официальный мерч‑магазин лучшего репера Оксимирона. Уникальный дизайн, высокое качество и стиль, отражающий дух его творчества.</p>
+    </section>
+
+    <nav class="menu">
+      <ul>
+        <li class="dropdown">
+          <a href="#"><span class="contact-icon">📩</span> Свяжитесь с нами, Йоу!</a>
+          <ul class="dropdown-content">
+            <li>📧 support@oxxystore.ru</li>
+            <li>📍 Омск, ул. Оксимирона д.1</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <section id="partners">
+      <h2>Партнёры</h2>
+      <div class="partners-banner">
+        <a href="https://vk.com/oxxxy" target="_blank" aria-label="VK Оксимирон">
+          <img src="https://cdn.freebiesupply.com/images/large/2x/vk-logo-black-transparent.png" alt="VK" width="100" height="100" loading="lazy">
+        </a>
+        <a href="https://www.instagram.com/oxximiron/" target="_blank" aria-label="Instagram Оксимирон">
+          <img src="https://images.icon-icons.com/791/PNG/512/instagram_f_icon-icons.com_65485.png" alt="Instagram" width="100" height="100" loading="lazy">
+        </a>
+      </div>
+    </section>
+
+    <div id="cartModal" class="cart-modal">
+      <div class="cart-content">
+        <span class="close-btn" id="closeCart">&times;</span>
+        <h2>Ваша корзина</h2>
+        <div id="cartItemsContainer"></div>
+        <div class="cart-total">
+          <strong>Итого:</strong> <span id="cartTotalValue">0</span> ₽
+        </div>
+        <button id="checkoutBtn">Оформить заказ</button>
+        <button id="clearCartBtn">Очистить корзину</button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 OxxyStore. Все права защищены.</p>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Регистрация">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/597/597177.png" />
+  <title>Регистрация — Магазин автозапчастей МосАвто</title>
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/597/597177.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="registration.js"></script>
+  <style>
+    .reg-form {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 20px;
+      max-width: 500px;
+      margin: 40px auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .reg-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+    .reg-form .field {
+      margin-bottom: 15px;
+    }
+    .reg-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .reg-form input[type="text"],
+    .reg-form input[type="password"],
+    .reg-form textarea,
+    .reg-form select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .reg-form textarea {
+      resize: vertical;
+    }
+    .reg-form fieldset {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+    .reg-form fieldset legend {
+      font-weight: bold;
+      padding: 0 5px;
+    }
+    .reg-form .checkbox {
+      display: flex;
+      align-items: center;
+    }
+    .reg-form .checkbox input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .reg-form button {
+      background-color: #3b5998;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    .reg-form button:hover {
+      background-color: #344e86;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="container">
+      <div class="header-wrapper">
+        <div class="logo">
+          <!-- Логотип с ссылкой на главную страницу проекта -->
+          <a href="index.html"><img src="iphone.png" alt="Логотип" width="80"></a>
+        </div>
+        <h1>Регистрация</h1>
+        <nav aria-label="Основная навигация">
+          <ul class="main-nav">
+            <li><a href="index.html" target="_blank">Главная</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Основное содержимое страницы с формой регистрации -->
+  <main class="container">
+    <form id="regForm" class="reg-form" action="/registration" method="post">
+      <h2>Создайте аккаунт</h2>
+      <div class="field">
+        <label for="login">Логин</label>
+        <input id="login" name="login" type="text" placeholder="Введите логин" required>
+      </div>
+      <div class="field">
+        <label for="password">Пароль</label>
+        <input id="password" name="password" type="password" placeholder="Введите пароль" required minlength="8">
+      </div>
+      <div class="field">
+        <label for="city">Ваш город</label>
+        <select name="city" id="city" required>
+          <option value="Москва">Москва</option>
+          <option value="Санкт-Петербург">Санкт-Петербург</option>
+          <option value="Казань">Казань</option>
+          <option value="Астрахань">Астрахань</option>
+          <option value="Калининград">Калининград</option>
+          <option value="Другой город">Другой город</option>
+        </select>
+      </div>
+      <div class="field checkbox">
+        <input id="agreement" name="agreement" type="checkbox" required>
+        <label for="agreement">Согласен на персональную обработку данных</label>
+      </div>
+      <div>
+        <button type="submit">Зарегистрироваться</button>
+      
+      </div>
+
+    </form>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Магазин смартфонов SmartZone. Все права защищены.</p>
+    </div>
+  </footer>
+</body>
+</html>
